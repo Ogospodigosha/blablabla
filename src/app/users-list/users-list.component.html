@@ -1,0 +1,11 @@
+<button class="btn" (click)="openModal()">Добавить пользователя</button>
+<div class="flex" >
+  <app-user-card *ngFor="let user of users$ | async" [user]="user" (delEvent)="delUser($event)" (editEvent)="editUser($event)" ></app-user-card>
+</div>
+
+
+@if(modalService.open$ | async) {
+<create-edit-user (createUserEmit)="createUser()" [data]="editableUser"  (editUserEmit)="editUser($event)"></create-edit-user>
+}
+
+

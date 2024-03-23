@@ -1,0 +1,10 @@
+<div class="container">
+  <div>
+    <div>email: {{user.email}}</div>
+    <div>name: {{user.name}}</div>
+    <div>phone: {{user.phone}}</div>
+    <div>website: {{user.website}}</div>
+  </div>
+  <button (click)="delUser(user.id)">Удалить</button>
+  <button (click)="editUser(user)">Редактировать</button>
+</div>

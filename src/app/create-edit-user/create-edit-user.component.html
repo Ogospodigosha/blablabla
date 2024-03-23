@@ -1,0 +1,29 @@
+
+
+<div class="overlay">
+  <form class="dialog-container" [formGroup]="fbForm">
+    <div class="dialog-content">
+      <h2>Создать/редактировать юзера</h2>
+      <div class="flex-input">
+        <label for="email"></label>
+        <input placeholder="email" type="text" id="email" formControlName="email">
+        <label for="name"></label>
+        <input placeholder="name" type="text" id="name" formControlName="name">
+        <label for="phone"></label>
+        <input  placeholder="phone" type="text" id="phone" formControlName="phone">
+        <label for="website"></label>
+        <input placeholder="website" style="margin-bottom: 15px" type="text" id="website" formControlName="website">
+      </div>
+
+      <div class="flex">
+        <button (click)="closeDialog()">Закрыть</button>
+        @if(isEdit) {
+        <button (click)="editUser()">Изменить</button>
+        }
+        @else {
+        <button (click)="createUser()">Сохранить</button>
+        }
+      </div>
+    </div>
+  </form>
+</div>

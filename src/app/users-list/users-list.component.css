@@ -1,0 +1,9 @@
+.flex {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  margin: 15px 0;
+}
